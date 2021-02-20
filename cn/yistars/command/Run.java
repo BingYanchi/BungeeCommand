@@ -25,13 +25,13 @@ implements TabExecutor {
 	public void execute(CommandSender sender, String[] args) {
 		if (args.length >= 2) {
 			if (sender.hasPermission("bungeecommand.admin") == false) {
-				sender.sendMessage(new ComponentBuilder ("无权操作").color(ChatColor.RED).create());
+				sender.sendMessage(new ComponentBuilder ("鏃犳潈鎿嶄綔").color(ChatColor.RED).create());
 				return;
 			}
 			
 			ProxiedPlayer player = ProxyServer.getInstance().getPlayer(args[0]);
 			if (player == null) {
-				sender.sendMessage(new ComponentBuilder ("无效玩家").color(ChatColor.RED).create());
+				sender.sendMessage(new ComponentBuilder ("鏃犳晥鐜╁").color(ChatColor.RED).create());
 				return;
 			}
 			
@@ -45,7 +45,7 @@ implements TabExecutor {
 			command = command.substring(0,command.length()-1);
 			
 			if (command == "") {
-				sender.sendMessage(new ComponentBuilder ("无效指令").color(ChatColor.RED).create());
+				sender.sendMessage(new ComponentBuilder ("鏃犳晥鎸囦护").color(ChatColor.RED).create());
 				return;
 			}
 			ProxyServer.getInstance().getPluginManager().dispatchCommand(player, command);
